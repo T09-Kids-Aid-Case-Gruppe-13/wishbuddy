@@ -2,3 +2,69 @@
 
 ---
 <!-- THIS IS FOR DESIGNING THE FOOTER  -->
+<footer>
+    <div class="footer-content">
+        <div class="socials">
+            <a href="#">
+                <img src="/public/img/socials/FB.svg" alt="">
+            </a>
+            <a href="#">
+                <img src="/public/img/socials/Insta.svg" alt="">
+            </a>
+            <a href="#">
+                <img src="/public/img/socials/Twitter.svg" alt="">
+            </a>
+            <a href="#">
+                <img src="/public/img/socials/Youtube.svg" alt="">
+            </a>
+        </div>
+        
+        <div>
+            <p> © 2024 WishBuddy. All rights reserved. </p>
+        </div>    
+    </div>
+</footer>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Mansalva&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    /* --- mobile ---*/
+    footer{
+        background-color: #303030;
+        padding: 20px 0 20px 0;
+    }
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        max-width: 80%;
+        margin: auto;
+
+        font-family: 'montserrat','sans-serif';
+        font-size: .8rem;
+        font-weight: 300;
+        color: white;
+    }
+    .socials {
+        display: flex;
+        gap: 10px;
+    }
+    a {
+        text-decoration: none;
+    }
+    .socials img{
+    }
+
+    /* --- desktop ---*/
+    @media (min-width: 1200px) {
+        .footer-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto;
+        }
+    }
+        
+    
+    
+</style>

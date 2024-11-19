@@ -3,3 +3,148 @@
 ---
 <!-- THIS IS FOR DESIGNING THE HEADER  -->
 
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="#" alt="logo">
+        </a>
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="spil.html">Om Us</a></li>
+            <li><a href="teknik.html">Støt Os</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+</header>
+
+<script src="../Styles/menu.js"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Mansalva&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* ---------------- BURGER MENU ---------------- */
+header{
+    padding: 20px 20px 20px 20px;
+    background-color: #1a1a1a;
+}
+.menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+  nav.active .menu {
+    display: block;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+  nav.active .menu a {
+    font-size: 1.5rem;
+  }
+
+/* ----- DESKTOP -----*/
+   @media (min-width: 1200px) {
+    header {
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 20px 10% 20px 10%;
+}
+
+.logo img{
+    width: 200px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li:last-child{
+    margin-right: 0;
+}
+
+.menu a{
+    display: block;
+    color:#fff;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    text-align: end;
+}
+
+nav a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+nav a:hover {
+    text-decoration: none;
+    font-size: 1.1rem; 
+    color:#994bff;
+}
+nav a:active {
+    text-decoration: underline;
+} 
+
+.burger {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .burger .line {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+  }
+  .burger {
+    display: none;
+  }
+   }
+</style>
