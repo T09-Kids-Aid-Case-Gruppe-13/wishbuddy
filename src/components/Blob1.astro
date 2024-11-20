@@ -1,0 +1,40 @@
+---
+import "../Styles/style.css"
+
+---
+
+<div class="image-container">
+    <img src="/public/img/svg/blob1.svg" alt="blob1">
+    <div class="blob_text">
+        <p>Wish buddies are a magical companion who's job is to entertain and bring joy to the children at KidsAid. You can read more about these whimsical magicians</p>
+    </div>
+</div>
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.image-container {
+    position: relative; /* Establish a positioning context */
+    display: inline-block; /* Optional: Ensures image and text are treated as a block */
+}
+
+.image-container img {
+    display: block; /* Ensures no extra space below the image */
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.blob_text {
+    position: absolute; /* Position relative to the container */
+    top: 55%; /* Center vertically */
+    left: 55%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    text-align: center; /* Align text within the blob_text container */
+    padding: 10px; /* Optional: Add padding for spacing */
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+}
+
+</style>

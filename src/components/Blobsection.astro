@@ -1,0 +1,66 @@
+---
+import "../Styles/style.css"
+import Blob1 from "./Blob1.astro"
+import Blob2 from "./Blob2.astro"
+import Blob3 from "./Blob3.astro"
+import Blob4 from "./Blob4.astro"
+---
+
+<section>
+    <div class="blob1">
+        <Blob1 />
+    </div>
+    <div class="blob2">
+        <Blob2 />
+    </div>
+    <div class="blob3">
+        <Blob3 />
+    </div>
+    <div class="blob4">
+        <Blob4 />
+    </div>
+    <div>
+        <svg width="1980" height="2439" viewBox="0 0 1980 2439" fill="none" xmlns="http://www.w3.org/2000/svg" class="squiggle">
+            <path d="M-18 10C-18 10 2256.79 131.745 1767.44 577.013C1509.39 811.811 1205.1 855.55 808.442 840.214C578.761 831.333 446.76 637.6 241.079 717.595C13.5247 806.097 19.5842 1011.22 66.3513 1205.73C170.66 1639.55 1104.25 904.853 1519.4 1205.73C1772.96 1389.49 2164.21 1717.83 1857.81 1843.81C1636.35 1934.87 1493.1 1647.12 1248.27 1688.39C1033.63 1724.57 1019.78 1914.49 808.442 1960.96C578.77 2011.47 398.874 1777.8 204.928 1885.99C-26.7062 2015.2 291.723 2152.94 204.928 2280C123.976 2398.5 -131 2429 -131 2429" stroke="black" stroke-width="19" stroke-linecap="round"/>
+        </svg>
+    </div>
+</section>
+
+
+
+    
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+section {
+    padding: 120px;
+    padding-top: 50px;
+    background-color: #C18FFD;
+    
+}
+
+.blob2 {
+  margin-left: 50vw;
+}
+.blob3 {
+  
+}
+.blob4 {
+  margin-left: 50vw;
+}
+
+svg.squiggle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 150vw;
+    
+}
+
+svg.squiggle path{
+    stroke: white;
+    
+}
+</style>
