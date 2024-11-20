@@ -46,10 +46,23 @@ import StotButton from "./StotButton.astro";
 
 
 <style>
+    h2{
+        font-family: "mansalva";
+        font-size: 2rem;
+        text-align: center;
+    }
     p{
         font-family: "montserrat", sans-serif;
+        font-size: .8rem;
+        text-align: center;
         max-width: 65ch;
+        margin: auto;
     }
+
+    .text-box{
+        margin: auto;
+    }
+
     .hero{
         background-color: #DDC1FF;
         padding: 100px 0;
@@ -67,15 +80,10 @@ import StotButton from "./StotButton.astro";
     }
 
     section{
-            background-color: #D5B2FF;
-            padding: 50px;
-            margin-top: -10px;
-            color: #303030;
-        }
-
-    .hero p{
-        text-align: left;
-        
+        background-color: #D5B2FF;
+        padding: 50px;
+        margin-top: -10px;
+        color: #303030;
     }
 
     h4, h5{
@@ -86,13 +94,14 @@ import StotButton from "./StotButton.astro";
     }
     .stats{
         display: flex;
+        flex-direction: column;
         gap: 30px;
         justify-content: center;
-        text-align: center;
+        text-align: left;
         /* color: #623598; */
         color: #303030;
         margin: 50px 0;
-        scale:.5;
+        /* scale:.5; */
     }
     .veritcal-line{
         border-left: 3px solid #303030
@@ -100,7 +109,20 @@ import StotButton from "./StotButton.astro";
     }
 @media (min-width: 600px){
     .stats{
-        scale:1;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: center;
+        text-align: center;
+        /* color: #623598; */
+        color: #303030;
+        margin: 50px 0;
+        /* scale:.5; */
+    }
+
+    
+    .hero p{
+        text-align: left;
     }
 }
 
