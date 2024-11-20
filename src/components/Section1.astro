@@ -4,13 +4,15 @@ import StotButton from "../components/StotButton.astro";
 
 
 <div class="hero">
-<img class="mascot" src="/public/img/svg/frobert.svg" alt="">
+<!-- <img class="mascot" src="/public/img/svg/frobert.svg" alt=""> -->
+ <video id="background_video" autoplay loop muted src="/public/img/mock_video_v3.mp4"></video>
 <div class="text-box">
     <p>WishBuddy bringer magi og smil til børneafdelinger i hele landet med vores dedikerede magikere. Med deres tryllekunst give de børn en pause fra sygdom og bekymringer gennem fortryllende oplevelser.</p>
-<div class="stot_button"></StotButton></div>
+    <div class="stot_button"><StotButton></div>
 </div>
 </div>
-<img class="top_transition" src="/public/img/svg/section1_top_trasition.png" alt="">
+<img class="top_transition" src="/public/img/svg/section1_top_trasition_v2
+.png" alt="">
 
 <section>
     <div>
@@ -24,23 +26,28 @@ import StotButton from "../components/StotButton.astro";
         <div class="stats-info">
             <h4>7</h4>
             <h5>Tryllekunstnere</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div class="veritcal-line"></div>
         <div class="stats-info">
             <h4>10.000</h4>
             <h5>Børn</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div class="veritcal-line"></div>
         <div class="stats-info">
-            <h4>80</h4>
+            <h4>25</h4>
             <h5>Sygehus</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div class="veritcal-line"></div>
         <div class="stats-info">
-            <h4>70</h4>
+            <h4>2500</h4>
             <h5>Timer</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
     </div>
+    <img class="section_img" src="/public/img/magician_.webp" alt="image1">
 </section>
 <img class="bottom_transition" src="/public/img/svg/section1_bottom_trasition.png" alt="">
 
@@ -64,8 +71,23 @@ import StotButton from "../components/StotButton.astro";
     }
 
     .hero{
-        background-color: #DDC1FF;
-        padding: 100px 0;
+        /* background-color: #DDC1FF; */
+        /* padding: 100px 0; */
+
+        display: grid;
+        place-items: center;
+    }
+
+    #background_video{
+       grid-area: 1 /1; 
+       width: 100%;
+       object-fit: cover;
+       z-index: -1;
+       background-position: fixed;
+    }
+    .hero .text-box{
+        grid-area: 1 /1;
+        color: #fff;
     }
     .mascot{
         max-width: 300px;
@@ -74,6 +96,9 @@ import StotButton from "../components/StotButton.astro";
     }
     .stot_button{
         margin: auto;
+        display: flex;
+        justify-content: center;
+        padding: 25px;
     }
     .top_transition, .bottom_transition{
         width: 100%;
@@ -91,6 +116,8 @@ import StotButton from "../components/StotButton.astro";
     }
     h4{
         font-size: 2rem;
+        color: #623598;
+        /* A26EF4 */
     }
     .stats{
         display: flex;
@@ -103,15 +130,43 @@ import StotButton from "../components/StotButton.astro";
         margin: 50px 0;
         /* scale:.5; */
     }
-    .veritcal-line{
-        border-left: 3px solid #303030
-        ;
+    .stats-info{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        text-align: left;
     }
+    .stats-info p{
+        font-size: .8rem;
+        text-align: left;
+        margin: 0;
+    }
+    .veritcal-line{
+        border-left: 3px solid #303030;
+        display: none;
+    }
+    .top_transition{
+        margin-top: -150px;
+    }
+    .bottom_transition{
+        margin-bottom: -10px;
+    }
+
+    .section_img{
+        display: block;
+        max-width: 100%;
+        margin: 50px auto;
+        border-radius: 25px;
+    }
+
+    /* ------------------------------------
+    ----------------DESKTOP --------------- 
+    ---------------------------------------*/
 @media (min-width: 600px){
     .stats{
         display: flex;
         flex-direction: row;
-        gap: 30px;
+        flex-wrap: wrap;
         justify-content: center;
         text-align: center;
         /* color: #623598; */
@@ -119,11 +174,35 @@ import StotButton from "../components/StotButton.astro";
         margin: 50px 0;
         /* scale:.5; */
     }
-
-    
-    .hero p{
-        text-align: left;
+    h2{
+        font-size: 46px;
     }
+    h4{
+        font-size: 52px;
+    }
+    h5{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    p{
+        font-size: 24px;
+        max-width: 55ch;
+    }
+    .stats{
+        margin: 100px 0;
+    }
+    .stats-info p{
+        font-size: 18px;
+        max-width: 25ch;
+    }
+    .hero p{
+        text-align: center;
+        
+    }
+    .section_img{
+        max-width: 80%;
+    }
+
 }
 
 </style>
