@@ -1,5 +1,5 @@
 ---
-
+import StotButton from "./StotButton.astro";
 ---
 
 
@@ -7,6 +7,7 @@
 <img class="mascot" src="/public/img/svg/frobert.svg" alt="">
 <div class="text-box">
     <p>WishBuddy bringer magi og smil til børneafdelinger i hele landet med vores dedikerede magikere. Med deres tryllekunst give de børn en pause fra sygdom og bekymringer gennem fortryllende oplevelser.</p>
+<div class="stot_button"></StotButton></div>
 </div>
 </div>
 <img class="top_transition" src="/public/img/svg/section1_top_trasition.png" alt="">
@@ -45,7 +46,10 @@
 
 
 <style>
-    
+    p{
+        font-family: "montserrat", sans-serif;
+        max-width: 65ch;
+    }
     .hero{
         background-color: #DDC1FF;
         padding: 100px 0;
@@ -54,6 +58,9 @@
         max-width: 300px;
         margin: auto;
         display: block;
+    }
+    .stot_button{
+        margin: auto;
     }
     .top_transition, .bottom_transition{
         width: 100%;
