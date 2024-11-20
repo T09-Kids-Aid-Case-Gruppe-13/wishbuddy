@@ -24,35 +24,30 @@ import Blob4 from "./Blob4.astro"
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-
-
-
 section {
     padding: 120px;
     padding-top: 50px;
     background-color: #C18FFD;
 }
-
+.blob1{
+    margin-right: 50vw;
+}
 .blob2 {
   margin-left: 50vw;
 }
 .blob3 {
+    margin-right: 50vw;
 }
 .blob4 {
   margin-left: 50vw;
 } 
 
-section svg.squiggle{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 150vw;
-    
+@media (max-width: 600px) {
+    section {
+    padding: 10px;
+    padding-top: 50px;
+    background-color: #C18FFD;
 }
-section svg.squiggle path{
-    stroke: white;
-} 
+}
+
 </style>
